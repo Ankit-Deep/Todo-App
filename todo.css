@@ -1,0 +1,368 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+:root {
+    --blue : #d1e5f7;
+    --red : #ffcece;
+    --green : #daf2d6;
+    --darkBlue : #d2ceff;
+    --black : #69665c;
+    --grey : #b2afa1;
+    --yellow: #fff9de;
+}
+
+html , body {
+    width: 100%;
+    height: 100%;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+}
+
+#blue {
+    width: 700px;
+    height: 700px;
+    background-color: var(--blue);
+    border-radius: 50%;
+    position: absolute;
+    bottom: 65%;
+    left: -10%;
+    z-index: 1;
+
+}
+#green {
+    width: 500px;
+    height: 500px;
+    background-color: var(--green);
+    border-radius: 50%;
+    position: absolute;
+    bottom: 2%;
+    left: 65%;
+    z-index: 1;
+
+}
+
+section {
+    background-color: #f4f4f473;
+    border-radius: 20px;
+    height: 80%;
+    width: 80vmax;
+    z-index: 2;
+    margin: 0 auto;
+    position: relative;
+    top: 10%;
+    box-shadow: 10px 15px 5px rgba(0, 0, 0, 0.135);
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid black; */
+}
+
+.upper-part {
+    /* border: 2px solid black; */
+    display: flex;
+    width: 100%;
+    height: 20%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.upper-part .logo {
+    font-size: 2vw;
+    margin: 0% 4%;
+
+}
+
+.upper-part i {
+    font-size: 1.75vw;
+    margin-right: 4%;
+    color: black;
+    background-color: none;
+    cursor: pointer;
+}
+
+
+.lower-part {
+    height: 100%;
+    display: flex;
+}
+
+.lower-part aside {
+    width: 20%;
+    height: 100%;
+    position: relative;
+    /* background-color: rgba(218, 218, 218, 0.295); */
+
+
+}
+
+.lower-part > aside > .catagories {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 60%;
+    /* border: 2px solid black; */
+
+}
+
+.catagories > div {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    align-items: center;
+    padding-left: 3vw;
+}
+
+.catagories > div:hover {
+    background-color: rgba(186, 186, 186, 0.185);
+    border-radius: 10px;
+}
+
+.catagories > div > .catagories-cirle  {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    /* border: 2px solid black; */
+}
+
+.work {
+    background-color: var(--darkBlue);
+}
+.study {
+    background-color: var(--blue);
+}
+.entertainment {
+    background-color: var(--red);
+}
+.family {
+    background-color: var(--green);
+}
+
+.catagories-name {
+    color: var(--black);
+    margin-left: 0.6vw;
+    font-weight: 500;
+}
+
+.checkbox {
+    margin: 10% 20% 0;
+    color: var(--black);
+    font-weight: 400;
+}
+
+/* Styling main todo */
+.main-todo {
+    width: 80%;
+    height: 100%;
+    /* border: 2px solid black; */
+
+}
+
+/* Styling dialog box */
+dialog {
+    border: none;
+    z-index: 2;
+    width: 40%;
+    height: 55%;
+    border-radius: 10px;
+    position: fixed;
+    top: 50%;
+    transform: translate(80%, -50%);
+}
+
+dialog .cancel-edit {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.cancel-edit > #cancel {
+    border: none;
+    font-size: 1vw;
+    background-color: white;
+    color: var(--black);
+    margin-left: 5%;
+    cursor: pointer;
+}
+
+.cancel-edit #edit {
+    font-size: 0.9vw;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--black);
+    color: white;
+    padding: 0.5vw 1.85vw;
+    margin-right: 5%;
+    cursor: pointer;
+}
+
+
+.todo-content {
+    height: 60%;
+    width: 100%;
+}
+
+.todo-content form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+form div {
+    height:50%;
+    margin-left: 5%;
+}
+
+form div label {
+    font-size: 1.2vw;
+    font-weight: 600;
+}
+
+.title-ctn {
+    height: 40%;
+}
+.description-ctn {
+    height: 60%;
+}
+
+form div input {
+    font-size: 0.9vw;
+    width: 95%;
+    height: 2.2vw;
+    margin-top: 1.5%;
+    border-radius: 5px;
+    border: none;
+    color: var(--black);
+    padding-left: 2%;
+    background-color:#e4e4e459 ;
+}
+
+#description {
+    height: 65%;
+    padding-bottom: 8%;
+}
+
+.tags {
+    position: relative;
+    /* border: 2px solid black; */
+    /* background-color: lightsalmon; */
+    height: 20%;
+    padding-left: 5%;
+}
+
+.catagories-tags {
+    /* border: 2px solid black; */
+    height: 50%;
+    display: flex;
+    align-items: center;
+    margin-top: 1.5%;
+    /* padding: 0 1vw; */
+    /* justify-content: space-between; */
+}
+
+.catagories-tags div {
+    /* border: 2px solid red; */
+    border-radius: 5px;
+    height: 100%;
+    width: fit-content;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-right: 1.25vw;
+    padding: 0.25vw 0.25vw;
+    /* display: inline-table; */
+    /* margin: auto; */
+}
+
+.catagories-tags > div > .catagories-cirle  {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    content-visibility: hidden;
+}
+
+.add-task {
+    font-size: 0.9vw;
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 0.4vw 0.85vw;
+    margin-left: 3%;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    body {
+        overflow: hidden;
+    }
+
+    #blue, #green {
+        display: none;
+    }
+
+    section {
+        height:100%;
+        width: 100%;
+        position: relative;
+        top: 0%;
+        display: flex;
+    }
+
+    .upper-part {
+        height: 15%;
+        /* background-color: #e4e4e47a; */
+    }
+    
+    .upper-part .logo {
+        font-size: 8vw;
+        margin: 0% 4%;
+    }
+    
+    .upper-part .add {
+        font-size: 3.5vw;
+        padding: 2.5vw 5.5vw;
+    }
+
+    .lower-part {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .lower-part aside {
+        width: 100%;
+        height: 10%;
+        display: flex;
+        background-color: #e4e4e44c;
+        padding-left: 1vw;
+    }
+
+    .lower-part > aside > .catagories {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    .catagories > div {
+        height: 100%;
+    }
+
+    .checkbox {
+        display: none;
+    }
+
+    .main-todo {
+        width: 100%;    
+    }
+
+}

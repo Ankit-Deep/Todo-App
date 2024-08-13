@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="todo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+<body>
+    <main>
+        <div id="blue"></div>
+        <div id="green"></div>
+        <section>
+            <!-- Upper section -->
+            <div class="upper-part">
+                <h4 class="logo">todo</h4>
+                <i class="fa-solid fa-plus add"></i>
+                <!-- <button class="add"><i class="fa-solid fa-plus"></i></button> -->
+
+            </div>
+
+            <!--Lower section  -->
+            <div class="lower-part">
+            <!-- Left navbar/aside -->
+                <aside>
+                    <div class="catagories">
+                        <div>
+                            <span class="catagories-cirle work"></span>
+                            <span class="catagories-name" >work</span>
+                        </div>
+                        <div>
+                            <span class="catagories-cirle study"></span>
+                            <span class="catagories-name">study</span>
+                        </div>
+                        <div>
+                            <span class="catagories-cirle entertainment"></span>
+                            <span class="catagories-name">entertainment</span>
+                        </div>
+                        <div>
+                            <span class="catagories-cirle family"></span>
+                            <span class="catagories-name">family</span>
+                        </div>
+                    </div>
+    
+                    <div class="checkbox">
+                        <i id="check" class="fa-regular fa-square"></i> Hide Done Tasks
+                    </div>
+    
+                </aside>
+
+                <!-- Main todo -->
+                <div class="main-todo">
+                    <!-- <div class="tasks">
+                    
+                    </div> -->
+                </div>
+            </div>
+            <!-- End lower section -->
+
+        </section>
+    </main>
+
+    <dialog class="add-task-dialog">
+        <div class="cancel-edit">
+            <button id="cancel">Cancel</button>
+            <button id="edit">Edit</button>
+        </div>
+
+        <div class="todo-content">
+            <form action="">
+                <div class="title-ctn">
+                    <label for="title">Title</label><br>
+                    <input type="text" name="" id="title" placeholder="Enter title name"><br>
+                </div>
+
+                <div class="description-ctn">
+                    <label for="description">Description</label><br>
+                    <input type="text" name="" id="description" placeholder="Enter description about it">
+                </div>
+            </form>
+
+        </div>
+
+
+        <div class="tags">
+            <h3>Tags</h3>
+            <div class="catagories-tags">
+                <div>
+                    <span class="catagories-cirle work">we</span>
+                    <span class="catagories-name" >work</span>
+                </div>
+                <div>
+                    <span class="catagories-cirle study">we</span>
+                    <span class="catagories-name">study</span>
+                </div>
+                <div>
+                    <span class="catagories-cirle entertainment">we</span>
+                    <span class="catagories-name">entertainment</span>
+                </div>
+                <div>
+                    <span class="catagories-cirle family">we</span>
+                    <span class="catagories-name">family</span>
+                </div>
+                
+                <button class="add-task">Add</button>
+            </div>
+
+        </div>
+        
+    </dialog>
+
+
+    <script src="todo.js">
+        
+    </script>
+</body>
+</html>
