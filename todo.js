@@ -20,37 +20,41 @@ addBtn.addEventListener("click", () => {
 // Functionality for adding different tasks / todo
 const addTask = document.querySelector('.add-task');
 addTask.addEventListener('click', ()=> {
-    // Creating the main todo container
-    const todo = document.createElement('div');
-    todo.style.width = '45%';
-    todo.style.height = '45%';
-    todo.style.borderRadius = '10px';
-    todo.style.backgroundColor = '#fff9de';
-
-    // Creating a heading tag for title:
+    // Accessing both the input tags (Title & Description)
     const inputTitle = document.querySelector('#title');
-
-    const title = document.createElement('h4');
-    title.innerText = inputTitle.value;
-    inputTitle.value = '';
-
-
-    // Creating a paragraph tag for description:
     const inputDescription = document.querySelector("#description");
-    const description = document.createElement('p');
-    description.innerText = inputDescription.value;
-    description.style.color = '#69665c';
-    inputDescription.value = '';
-
-
-    // Appending them one by one
-    mainTodo.appendChild(todo);
-    todo.appendChild(title);
-    todo.appendChild(description);
-    dialog.close();
-    body.style.overflow = 'visible';
     
+    
+    if (inputTitle.value === '' && inputDescription.value === '') {
+        alert("Please Enter the Title & Description first.");
+    } else {
+        // Creating the main todo container
+        const todo = document.createElement('div');
+        todo.style.width = '45%';
+        todo.style.height = '45%';
+        todo.style.borderRadius = '10px';
+        todo.style.backgroundColor = '#fff9de';
+        
+        // Creating a heading tag for title:
+        const title = document.createElement('h4');
+        title.innerText = inputTitle.value;
+        inputTitle.value = '';
+        
+        // Creating a paragraph tag for description:
+        const description = document.createElement('p');
+        description.innerText = inputDescription.value;
+        description.style.color = '#69665c';
+        inputDescription.value = '';
+        
+        // Appending them one by one
+        mainTodo.appendChild(todo);
+        todo.appendChild(title);
+        todo.appendChild(description);
+        dialog.close();
+        body.style.overflow = 'visible';
+    }
 })
+
 
 
 
