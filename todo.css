@@ -149,6 +149,19 @@ section {
     width: 80%;
     height: 100%;
     border: 2px solid black;
+    display: flex;
+    gap: 5%;
+    flex-wrap: wrap;
+    overflow: scroll;
+}
+
+.main-todo::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+}
+
+.main-todo {
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+    scrollbar-width: none; /* For Firefox */
 }
 
 /* Styling dialog box */
@@ -351,7 +364,8 @@ form div input {
     }
 
     .main-todo {
-        width: 100%;    
+        width: 100%;
+        flex-direction: column;    
     }
 
     /* Responsive of dialog */
