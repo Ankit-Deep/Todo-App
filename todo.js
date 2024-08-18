@@ -6,13 +6,6 @@ const cancelBtn = document.querySelector("#cancel");
 const checkBox = document.querySelector('.checkbox');
 
 
-// window.addEventListener('beforeunload', (event)=> {
-//     event.preventDefault();
-//     alert("refreshed");
-// })
-
-
-
 addBtn.addEventListener("click", () => {
     if (typeof dialog.showModal === "function") {
         // Now dialog always acts like a native <dialog>.
@@ -56,16 +49,6 @@ addTask.addEventListener('click', ()=> {
         todo.style.display = 'flex';
         todo.style.borderRadius = '15px';
         todo.style.backgroundColor = '#fff9de';
-
-        
-        // if ( mainTodo.clientWidth > mainTodo.clientHeight ) {
-        //     todo.style.width = '48%'
-        //     todo.style.padding = '2%';
-        // } else {
-        //     todo.style.width = '95%';
-        //     todo.style.margin = '1.5% 2.5%';
-        //     todo.style.padding = '2%';
-        // }
         
         // Creating a heading tag for title:
         const title = document.createElement('h4');
@@ -84,13 +67,11 @@ addTask.addEventListener('click', ()=> {
 
         // Creating right div for edit & delete option and done option
         const rightDiv = document.createElement('div');
-        // rightDiv.style.border = '2px solid black';
         rightDiv.style.width = '20%';
         rightDiv.style.display = 'flex';
         rightDiv.style.flexDirection = 'column';
         rightDiv.style.alignItems = 'end';
         rightDiv.style.justifyContent = 'space-between';
-
 
         // Creating three dots to edit or delete
         const deleteTask = document.createElement('i');
@@ -110,10 +91,8 @@ addTask.addEventListener('click', ()=> {
         doneTask.style.color = 'black';
         doneTask.style.fontSize = '1vw';
 
-
         doneTask.addEventListener('click', ()=> {
             clickCount++;
-            console.log(clickCount);
             
             if (clickCount%2 !== 0) {
                 doneTask.classList.replace('fa-square', 'fa-square-check');
@@ -141,13 +120,10 @@ addTask.addEventListener('click', ()=> {
             rightDiv.style.marginRight = '2%';
         }
 
-
         // Appending them one by one
         mainTodo.appendChild(todo);
         todo.appendChild(leftDiv);
         todo.appendChild(rightDiv);
-
-
         leftDiv.appendChild(title);
         leftDiv.appendChild(description);
         rightDiv.appendChild(deleteTask);
@@ -162,11 +138,15 @@ addTask.addEventListener('click', ()=> {
 
 
 
-
+let checkCount = 0;
 // Functionality of Hide Done Tasks ( NOT DONE )
 check.addEventListener("click", ()=> {
-    if (check.classList.contains('fa-regular', 'fa-square')){
-        check.classList.add('fa-regular', 'fa-square-check');
+    checkCount++;
+
+    if (checkCount%2 !== 0) {
+        check.classList.replace('fa-square', 'fa-square-check')
+    } else {
+        check.classList.replace('fa-square-check','fa-square');
     }
 }) 
 
