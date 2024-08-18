@@ -135,9 +135,6 @@ addTask.addEventListener('click', ()=> {
 
 
 
-
-
-
 let checkCount = 0;
 // Functionality of Hide Done Tasks ( NOT DONE )
 check.addEventListener("click", ()=> {
