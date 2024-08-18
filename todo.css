@@ -409,7 +409,7 @@ form div textarea {
         font-weight: 600;
     }
     
-    form div input {
+    form div textarea {
         font-size:3.5vw;
         width: 95%;
         height: 8vw;
@@ -452,11 +452,6 @@ form div textarea {
     /* Responsive of main todo(where all tasks get added)*/
     .main-todo {
         width: 100%;
-        /* flex-direction: column; */
-        /* overflow-y: scroll; */
-        /* flex-wrap: nowrap; */
-        /* align-items: center; */
-        /* justify-content: center; */
         padding-top: 2.5%;
     }
 
