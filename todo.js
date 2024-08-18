@@ -51,19 +51,21 @@ addTask.addEventListener('click', ()=> {
 
         // Creating the main todo container
         const todo = document.createElement('div');
-        if ( mainTodo.clientWidth > mainTodo.clientHeight ) {
-            todo.style.width = '48%'
-            todo.style.padding = '2%';
-        } else {
-            todo.style.width = '95%';
-            todo.style.margin = '1.5% 2.5%';
-            todo.style.padding = '2%';
-        }
         todo.style.position = 'relative';
         todo.style.height = 'fit-content';
         todo.style.display = 'flex';
         todo.style.borderRadius = '15px';
         todo.style.backgroundColor = '#fff9de';
+
+        
+        // if ( mainTodo.clientWidth > mainTodo.clientHeight ) {
+        //     todo.style.width = '48%'
+        //     todo.style.padding = '2%';
+        // } else {
+        //     todo.style.width = '95%';
+        //     todo.style.margin = '1.5% 2.5%';
+        //     todo.style.padding = '2%';
+        // }
         
         // Creating a heading tag for title:
         const title = document.createElement('h4');
@@ -122,8 +124,22 @@ addTask.addEventListener('click', ()=> {
                 title.innerHTML = title.innerText;
                 description.innerHTML = description.innerText;
             }
-
         })
+
+        // Responsiveness of Todo tasks
+        if ( mainTodo.clientWidth > mainTodo.clientHeight ) {
+            todo.style.width = '48%'
+            todo.style.padding = '2%';
+        } else {
+            todo.style.width = '95%';
+            todo.style.margin = '1.5% 2.5%';
+            todo.style.padding = '3.5%';
+            title.style.fontSize = '5.5vw';
+            description.style.fontSize = '3.5vw';
+            deleteTask.style.fontSize = '4.5vw';
+            doneTask.style.fontSize = '3vw';
+            rightDiv.style.marginRight = '2%';
+        }
 
 
         // Appending them one by one
